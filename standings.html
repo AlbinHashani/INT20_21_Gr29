@@ -84,15 +84,15 @@
 		font-family: fantasy;
 		background-color: #070c2f;
 	}
-	div.table2 tr,td,th{
-		padding: 30px;
-		position: relative;
-		left: 18px;
-		border: 1px solid #000;
-		text-align: center;
-		font-size: 120%;
-	}
-	.footer-container{
+		div.table2 tr,td,th{
+			padding: 30px;
+			position: relative;
+			left: 18px;
+			border: 1px solid #000;
+			text-align: center;
+			font-size: 120%;
+		}
+		.footer-container{
 			padding-top: 3%;
 			position: sticky;
 			background-color: #070c2f;
@@ -166,6 +166,9 @@
 			padding-left: 30px;
 			padding-bottom: 30px;
 			padding-top: 30px;
+		}
+		.signup{
+			display: block;
 		}
 	</style>
 </head>
@@ -556,21 +559,25 @@
 		<div class="footer">
 		<div class="adresa">
 			<address>
+				
 					<p>© 2021 NBA Media Venture,LLC,All rights reserved</p>
-					<p><a href="home.html">About</a></p>
+					<p><a href="NBA.html">About</a></p>
 			</address>
 		</div>	
-			<div class="footer-heading footer-1">
+			<div class="footer-heading ">
 				<h2>Social Media</h2>
-				<a href="#">Facebook</a>
-				<a href="#">Instagram</a>
-				<a href="#">Twitter</a>
+				<a href="https://www.facebook.com" target="_blank">Facebook</a>
+				<a href="https://www.instagram.com" target="_blank">Instagram</a>
+				<a href="https://www.twitter.com" target="_blank">Twitter</a>
 			</div>
+			<div class="signup">
 			<div class="footer-email">
 				<h2>Join our company</h2>
 				<input type="email" placeholder="Enter your email adress" id="footer-email">
 				<input type="submit" id="footer-email-btn" value="Sign up">
 			</div>
+			<input type="checkbox" id="footer-email-chb" >I agree to the <a href="">Terms and Conditions</a>
+		</div>
 		</div>
 	</div>
 </body>
