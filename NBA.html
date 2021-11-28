@@ -3,423 +3,407 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Schedule</title>
-    <style type="text/css">
-        *{
-            margin: 0;
-            padding: 0;
-            font: Century Gothic;
-        }
-        header
-        {
-            font-family: Verdana;
-            background-color:  #070c2f;
-            height: 135px;
-            color: #fff;
-        }
-        ul{
-            padding: 0;
-            float: right;
-            list-style-type: none;
-            margin-top: 55px;
-            margin-right: 940px;
-        }
-        ul li{
-            display: inline-block;
-        }
-        ul li a{
-            text-decoration: none;
-            color: #fff;
-            padding: 5px 25px;
-            border: 1px solid #fff;
-            transition: 0.6s ease;
-        }
-        ul li a:hover{
-            background-color: #fff;
-            color: #000;
-        }
-        .logo img{
-            margin-left: 10px;
-            float: left ;
-            width: 60px;
-            height: auto;
-        }
-        ul li.active a{
-            background-color: #fff;
-            color: #000;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            background: #fff;
-            overflow-x: hidden;
-        }
+	<title>NBA Website</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			font: Century Gothic;
 
-        img {
-            width: 100%;
-            height: 120%;
-        }
+		}
+		body{
+			overflow-x: hidden;
+		}
+		header
+		{
+			font-family: Verdana;
+			background-color:  #070c2f;
+			height: 135px;
+			color: #fff;
+		}
+		ul.ul1{
+			float: right;
+			list-style-type: none;
+			margin-top: 55px;
+			margin-right: 940px;
+		}
 
-        #slider {
-            width: 1000px;
-            height: 500px;
-            padding: 100%;
-            margin: 20px auto;
-            position: relative;
-            border: 10px solid #d3d3d3;
-            float: left;
-            }
+		ul.ul1 li{
+			display: inline-block;
+		}
+		ul.ul1 li a{
+			text-decoration: none;
+			color: #fff;
+			padding: 5px 25px;
+			border: 1px solid #fff;
+			transition: 0.6s ease;
 
-        h1 {
-            margin: 50px;
-        }         
+		}
+		ul.ul1 li a:hover{
+			background-color: #fff;
+			color: #000;
+		}
+		.logo img{
+			margin-left: 10px;
+			float: left ;
+			width: 60px;
+			height: auto;
+		}
+		ul.ul1 li.active a{
+			background-color: #fff;
+			color: #000;
+		}
+		ul.ul2 li{
+			font-family: Helvetica;
+			float: left;
+			margin-left: 20px;
+		}
+		ul.ul2 li{
+			display: block;
+		}
+		div.suns{
+			background-color: #ebedef;
+			position: relative;
+			left: -500px;
+			margin: 100px 550px;
+			border: 2px solid #070c2f;
+			padding: 20px;
+			border-top-right-radius: 15px;
+			border-top-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+			border-bottom-left-radius: 15px;
+		}
+		div.lebron{
+			background-color: #ebedef;
+			position: relative;
+			left: -500px;
+			top: -620px;
+			margin: 100px 550px;
+			border: 2px solid #070c2f;
+			border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
+			padding: 20px;
+		}
+		img.sunss{
+			width: 653.333;
+			height: auto;
+			position: relative;
+			right: 10px;
+		}
+		div.main{
+			font-family: Verdana;
+		}
+		div.curry{
+			background-color: #ebedef;
+			position: relative;
+			left: -500px;
+			top: -1230px;
+			margin: 100px 550px;
+			border: 2px solid #070c2f;
+			padding: 20px;
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
+			border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+		}
+		div.news{
+			margin-right: 20px;
+			padding-left: 10px;
+			opacity: 95%;
+			font-size: 300%;
+			position: relative;
+			left: 20px;
+			top: 20px;
+			color: #fff;
+			border: 2px solid transparent;
+			background-color: #070c2f;
+		}
+		div.main hr{
+			margin: 10px;
+			color: #070c2f;
+		}
+		div.suns1{
+			background-color: #ebedef;
+			padding: 20px;
+			font-size: 139%;
+			margin-right: 65%;
+			position: relative;
+			top: -648px;
+			left: 1000px;
+			border: 2px solid #070c2f;
+			border-bottom-left-radius: 15px;
+			border-top-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+			border-top-right-radius: 15px;
+		}
+		DIV.lebron1{
+			height: 540px;
+			background-color: #ebedef;
+			font-size: 139%;
+			padding: 10px;
+			border: 2px solid #070c2f;
+			margin-right: 65%;
+			position: relative;
+			left: 1000px;
+			top: -1280px;
+			border-bottom-right-radius: 15px;
+			border-bottom-left-radius: 15px;
+			border-top-right-radius: 15px;
+			border-top-left-radius: 15px;
+		}
+		div.curry2{
+			background-color: #ebedef;
+			font-size: 121%;
+			padding: 10px;
+			border: 2px solid #070c2f;
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
+			border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+			margin-right: 65%;
+			position: relative;
+			left: 1000px;
+			top: -1890px;
+			margin-bottom: -2000px;
+		}
+		img.imgcurry{
+			height: 330px;
+			width: auto;
 
-.slides {
-  width: 500%;
-  height: 100%;
-  display: flex;
-}
+		}
+		.main-footer{
+			background-color: #070c2f;
+			color: #fff;
+			text-align: center;
+			width: 100%;
+			margin-top: 1900px;
+			padding: 10px;
+			position: sticky;
+		}
+		li a#linqet{
+			display: inline-block;
+			text-decoration: none;
+		}
+		.footer-container{
+			padding-top: 3%;
+			position: sticky;
+			background-color: #070c2f;
+			padding-bottom: 4rem;
+			margin-top: 100%;
 
-.slideshow {
-  position: static;
-  margin: 100px 100px;
-  width: 60%;
-  height: 60%;
-}
+		}
+		.footer{
+			width: 80%;
+			height: 10vh;
+			background-color: #070c2f;
+			color: #fff;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin: 0 auto;
+			font-family: verdana;
+		}
+		.footer-heading{
+			display: flex;
+			flex-direction: column;
+			margin-right: 4rem;
+			margin-left: 4rem;
 
-.mySlides {
-    margin-top: 10%;
-  margin-left: 50%;
-  width: 150%;
-  height: 125%;
-  transform: translateX(50px);
-  -webkit-transition: width 0.5s;
-  transition: width 0.5s;
-}
+		}
+		.footer-heading h2{
+			margin-bottom: 2rem;
+		}
+		.footer-heading a{
+			color: #fff;
+			text-decoration: none;
+			margin-bottom: 0.5rem;
+		}
+		.footer-heading a:hover{
+			padding: 5px;
+			outline: none;
+			color: #ebedef;
+			transition: 0.6s ease-out;
+			border: 0.5px solid #fff;
 
-
-
-.mySlides:hover {
-  width: 1100px;
-
-  transform: translateX(-50px);
-}
-    .christmas{
-        margin-top: 20px;
-        padding-top: 10px;
-        font-size: 270%;
-        color: #fff;
-        text-align: left;
-        margin-left: 10px;
-        margin-right: -12%;
-        border: 1px solid transparent;
-        background-color: #070c2f;
-    }
-    h1{
-        font-family: verdana;
-    }
-    .footer-container{
-            padding-top: 3%;
-            position: sticky;
-            background-color: #070c2f;
-            padding-bottom: 4rem;
-            margin-top: %;
-
-        }
-        .footer{
-            width: 80%;
-            height: 10vh;
-            background-color: #070c2f;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 0 auto;
-            font-family: verdana;
-        }
-        .footer-heading{
-            display: flex;
-            flex-direction: column;
-            margin-right: 4rem;
-            margin-left: 4rem;
-
-        }
-        .footer-heading h2{
-            margin-bottom: 2rem;
-        }
-        .footer-heading a{
-            color: #fff;
-            text-decoration: none;
-            margin-bottom: 0.5rem;
-        }
-        .footer-heading a:hover{
-            color: #ebedef;
-            transition: 0.6s ease-out;
-
-        }
-        .footer-email h2{
-
-            margin-bottom: 0.5rem;
-        }
-        #footer-email{
-            width: 250px;
-            height: 40px;
-            border-radius: 5px;
-            outline: none;
-            border: none;
-            padding-left: 0.5rem;
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-        }
-        #footer-email-btn{
-            width: 100px;
-            height: 40px;
-            border-radius: 5px;
-            background-color: #f9423d;
-            margin-bottom: 2rem;
-            outline: none;
-            border: none;
-            color: #fff;
-            font-size: 1rem;
-        }
-        #footer-email-btn:hover{
-            cursor: pointer;
-            background-color: #337af1;
-            transition: 0.6s ease-out;
-        }
-        .footer-email-chb{
-            margin-bottom: 4rem;
-        }
-        
-        
-        .adresa{
-            list-style-type: none;
-            text-decoration: none;
-       }
-        
-        .alltables{
-            display: flex;
-            border-width: 2000px;
-            position: sticky;
-            top: 30%;
-            text-align: center;
-        }
-        .alltables table, tr, th, td{
-            border-collapse: collapse;
-        }
-        
-        table th{
-            background-color: #ebedef;
-        }
-        table{
-            font-family: verdana;
-            width: 30%;
-            height: 300px;
-        }
-        table.trr{
-            text-align: left;
-        }
-        table td.start{
-            background-color: #ebedef;
-        }
-    </style>
-    
+		}
+		.footer-email h2{
+			margin-bottom: 2rem;
+		}
+		#footer-email{
+			width: 250px;
+			height: 40px;
+			border-radius: 5px;
+			outline: none;
+			border: none;
+			padding-left: 0.5rem;
+			font-size: 1rem;
+			margin-bottom: 0.8rem;
+		}
+		#footer-email-btn{
+			width: 100px;
+			height: 40px;
+			border-radius: 5px;
+			background-color: #f9423d;
+			margin-bottom: 1rem;
+			outline: none;
+			border: none;
+			color: #fff;
+			font-size: 1rem;
+		}
+		#footer-email-btn:hover{
+			cursor: pointer;
+			background-color: #337af1;
+			transition: 0.6s ease-out;
+		}
+		.signup{
+			display: block;
+		}
+		.kd{
+			margin-top: 255px;
+			margin-right: 230px;
+			margin-left: 50px;
+			margin-bottom: -1800px;
+			border: 2px solid #070c2f;
+			border-radius: 15px;
+			padding: 20px;
+		}
+		#kdp{
+			font-size: 20px;
+			overflow-x: hidden;
+			margin-left: 50%;
+			text-align: left;
+			position: relative;
+			top: -870px;
+		}
+		.nested
+		{
+			position: absolute;
+			background-color: #070c2f;
+			margin-top: 20px;
+			width: 300px;
+			height: auto;
+		}
+		ul.nested{
+			display: block;
+		}
+		ul.ul-footer{
+			margin-left: 17px;
+		}
+		ul.ul-footer li a{
+			text-decoration: none;
+			color: #fff;
+			margin-left: 10px;
+		}
+		
+	</style>
 </head>
 <body>
 	<header>
 		<hr color="#fff">
+		<div class="main">
 			<div class="logo">
-				<a href="NBA.html"><img src="logo.png"></a>
+				<a href="NBA.html"><img  src="logo.png"></a>
 			</div>
-				<ul>
-					<li><a href = "NBA.html">HOME</a></li>
+				<ul class="ul1">
+					<li class="active"><a href = "NBA.html">HOME</a></li>
 					<li><a href = "statistics.html">STATISTICS</a></li>
-					<li  class="active"><a href="schedule.html">SCHEDULE</a></li>
-					<li><a href = "75.html">NBA75</a></li>
-					<li><a href = "standings.html">STANDINGS</a></li>
-					<li><a href="contact.html">CONTACT</a></li>
+					<li><a href="schedule.html">SCHEDULE</a></li>
+					<li><a href="history1.html">HISTORY</a></li>
+					<li><a href="standings.html">STANDINGS</a></li>
+					<li><a href = "contact.html">CONTACT</a></li>
 				</ul>
-    </header>
-    <div><h1 class="christmas">2021 CHRISTMAS GAMES</h1></div>
-    <div id="slideshows">
-        <div class="w3-content w3-section" style="max-width:500px">
-           
-                <img class="mySlides" src="img/gswsuns.jpg">
-       
-            <div class="celticsmil"><img class="mySlides" src="img/celticsmil.jpg"></div>
-            <div class="netslakers"><img class="mySlides" src="img/netslakers.jpg"></div>
-            <div class="mavsjazz"><img class="mySlides" src="img/mavsjazz.jpg"></div>
-        </div>
-    </div>
+			</div>
+	</header>
+	<div class="main">
+		<div class="news">
+			<p><b>NEWS</b></p>
+		</div>
+	<div class="suns">
+		<h1>Suns go to a 10 game winning streak</h1>
+		<hr>
+		<img alt="sunss" class="sunss" src="img/suns.jpg">
+	</div>
+	<div class="suns1">
+		<h2>SUNS GO 10 GAMES WIN STREAK</h2>
+		<hr>
+		<p>We’re one week away from the most wonderful time of the year.
+	Holiday season, yes. But more importantly, next Monday will be when <abbr title="National Basketball Association"> NBA </abbr> teams have played an average of 20 games! It’s the quarter pole of the season and it’s when we can really have a solid idea of who’s good and who’s not.
 
+	Team and player evaluation starts from Day 1, of course. And the Sacramento Kings didn’t wait until the 20-game mark to decide they needed a change on the bench. But with seven teams holding a 9-8 record through Week 5, we could really use these next seven days to sort things out a little further.
 
-    <br><br>
+Of course, there’s no question about who the two best teams in the league have been thus far. It’s the <mark>15-2 Warriors</mark> and the <mark>13-3 Suns</mark> at the top of the Power Rankings.
+</p>
+	</div>
+	<div class="lebron">
+		<h1> <u>LeBron</u> suspended 1 game; <u>Stewart</u> suspended 2</h1>
+		<hr>
+		<img alt="lebron" src="img/lebron.jpg">
+	</div>
+	<div class="lebron1">
+		<h1>FIGHTING IN LITTLE CAESARS ARENA</h1>
+		<hr>
+		<p>Detroit Pistons center <mark> Isaiah Stewart </mark> has been suspended two games without pay for escalating an on-court altercation by repeatedly and aggressively pursuing Los Angeles Lakers forward <mark> LeBron James </mark> in an unsportsmanlike manner, and James has been suspended one game without pay for recklessly hitting Stewart in the face and initiating an on-court altercation, it was announced today by Byron Spruell, President, League Operations.
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700%7CRaleway:700'
-        rel='stylesheet' type='text/css'>
-        <br>
-        <br>
-        <br>
-        <div class="alltables">
-        <table border="2">
-            <tr>
-                <th colspan="2">Golden State Warriors vs Phoenix Suns 25.12.2021</th>
+	Stewart was assessed two technical fouls, James was assessed a Flagrant Foul Penalty 2, and both players were ejected.<span style="color: #070c2f;"><b> The incident began with a loose ball foul on Stewart with 9:18 remaining in the third quarter of the Pistons’ 121-116 loss to the Lakers on Nov. 21 at Little Caesars Arena.</b></span>
 
-            </tr>
-            <tr>
-                <td class="start" colspan="2" >Starting Line-Ups</td>
-            </tr>
-            <tr>
-                <td>Golden State Warriors</td>
-                <td>Phoenix Suns</td>
-            </tr>
-            <tr class="trr">
-                <td>
-                    <ol>
-                        <li>Stephen Curry</li>
-                        <li>Jordan Poole</li>
-                        <li>Andrew Wiggins</li>
-                        <li>Draymond Green</li>
-                        <li>Kevon Looney</li>
-                    </ol>
-                </td>
-                <td>
-                    <ol>
-                        <li>Chris Paul</li>
-                        <li>Devin Booker</li>
-                        <li>Mikal Bridges</li>
-                        <li>Jae Crowder</li>
-                        <li>Deandre Ayton</li>
-                    </ol>
-                </td>
-            </tr>
-        </table>
+ </p>
+	</div>
+	<div  class="curry">
+		<h1>Curry on path to pass Allen for NO.1 all time 3-pt made</h1>
+		<hr>
+		<img alt="curry" src="img/curry.png">
+	</div>
+	<div class="curry2">
+		<h1>Steph Curry breaking the 3-point record seems historic</h1>
+		<hr>
+		<p>RAY ALLEN-2973 3PT</p>
+		<br>
+		<p>STEPHEN CURRY-2918 3PT</p>
+		<img alt="imgcurry" class="imgcurry" src="img/curry2.jpg">
+	</div>
+	<div class="kd">
+		<h1>Kevin Durant passes Allen Iverson for No. 25 on all-time career points list</h1>
+		<hr>
+		<img alt="imgkd" src="img/kd.jpg">
+		<p id="kdp">Kevin Durant’s spectacular start to the season has him locked in a battle with Stephen Curry atop the scoring leaderboard. It’s also elevated him past another NBA legend on the career leaderboard, with a first-quarter pullup on the right wing boosting Durant beyond the reach of Allen Iverson, where he claims No. 25 on the all-time points list with 24,369.
 
-            <table border="2">
-                <tr>
-                    <th colspan="2">Boston Celtics vs Milwaukee Bucks 25.12.2021</th>
-                </tr>
-                <tr>
-                    <td class="start" colspan="2"> Starting Line-Ups</td>
-                </tr>
-                <tr>
-                    <td>Boston Celtics</td>
-                    <td>Milwaukee Bucks</td>
-                </tr>
-                <tr class="trr">
-                    <td>
-                        <ol>
-                            <li>Marcus Smart</li>
-                            <li>Jaylen Brown</li>
-                            <li>Jayson Tatum</li>
-                            <li>Al Horford</li>
-                            <li>Robert Williams III</li>
-                        </ol>
-                    </td>
-                    <td>
-                        <ol>
-                            <li>Jrue Holiday</li>
-                            <li>Grayson Allen</li>
-                            <li>Khris Middleton</li>
-                            <li>Giannis Antetokoumpo</li>
-                            <li>Bobby Portis</li>
-                        </ol>
-                    </td>
-                </tr>
-            </table>
-    
-            <table border="2">
-                <tr>
-                    <th colspan="2">Brooklyn Nets vs LA Lakers 26.12.2021</th>
-                </tr>
-                <tr>
-                    <td class="start" colspan="2">Starting Line-Ups</td>
-                </tr>
-                <tr>
-                    <td>Brooklyn Nets</td>
-                    <td>LA Lakers</td>
-                </tr>
-                <tr class="trr">
-                    <td>
-                        <ol>
-                            <li>James Harden</li>
-                            <li>Joe Harris</li>
-                            <li>Bruce Brown</li>
-                            <li>Kevin Durant</li>
-                            <li>Lamarcus Aldridge</li>
-                        </ol>
-                    </td>
-                    <td>
-                        <ol>
-                            <li>Russell Westbrook</li>
-                            <li>Avery Bradley</li>
-                            <li>Lebron James</li>
-                            <li>Anthony Davis</li>
-                            <li>DeAndre Jordan</li>
-                        </ol>
-                    </td>
-                </tr>
-            </table>
-            <table border="2">
-                <tr>
-                    <th colspan="2">Dallas Mavericks vs Utah Jazz 26.12.2021</th>
-                </tr>
-                <tr>
-                    <td class="start" colspan="2">Starting Line-Ups</td>
-                </tr>
-                <tr>
-                    <td>Dallas Mavericks</td>
-                    <td>Utah Jazz</td>
-                </tr>
-                <tr class="trr">
-                    <td>
-                        <ol>
-                            <li>Luka Doncic</li>
-                            <li>Tim Hardaway Jr.</li>
-                            <li>Dorias Finney-Smith</li>
-                            <li>Kristpas Porzingis</li>
-                            <li>Dwight Powell</li>
-                        </ol>
-                    </td>
-                    <td>
-                        <ol>
-                            <li>Mike Conley</li>
-                            <li>Donovan Mitchell</li>
-                            <li>Bojan Bogdanovic</li>
-                            <li>Royce O'Neale</li>
-                            <li>Rudy Gobert</li>
-                        </ol>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        </div>
-    </div>
-
-    <div class="footer-container">
-        <div class="footer">
-        <div class="adresa">
-            <address>
-                
-                    <p>© 2021 NBA Media Venture,LLC,All rights reserved</p>
-                    <p><a href="NBA.html">About</a></p>
-            </address>
-        </div>  
-            <div class="footer-heading ">
-                <h2>Social Media</h2>
-                <a href="https://www.facebook.com" target="_blank">Facebook</a>
-                <a href="https://www.instagram.com" target="_blank">Instagram</a>
-                <a href="https://www.twitter.com" target="_blank">Twitter</a>
-            </div>
-            <div class="signup">
-            <div class="footer-email">
-                <h2>Join our company</h2>
-                <input type="email" placeholder="Enter your email adress" id="footer-email">
-                <input type="submit" id="footer-email-btn" value="Sign up">
-            </div>
-            <input type="checkbox" id="footer-email-chb" >I agree to the <a href="">Terms and Conditions</a>
-        </div>
-        </div>
-    </div> 
-    </body>
+		He now trails Ray Allen (24,505), and — at the current clip of 28.5 ppg entering Wednesday’s action — should surpass the sharpshooter within five games or so; Patrick Ewing (24,815) could follow 10-15 games after that.
+		</p>
+	</div>
+</div>
+	<div class="footer-container">
+		<div class="footer">
+		<div class="adresa">
+			<address>
+				
+					<p>© 2021 NBA Media Venture,LLC,All rights reserved</p>
+					<ul class="ul-footer">
+						<li>More: </li>
+						<ul>
+							<li><a href="NBA.html">About Us</a></li>
+							<li><a href="NBA.html">Log in</a></li>
+						</ul>
+					</ul>
+					<p>You can ,<a href="mailto:someone@example.com">Send email</a> to us.</p>
+			</address>
+		</div>	
+			<div class="footer-heading ">
+				<h2>Social Media</h2>
+				<a href="https://www.facebook.com" target="_blank">Facebook</a>
+				<a href="https://www.instagram.com" target="_blank">Instagram</a>
+				<a href="https://www.twitter.com" target="_blank">Twitter</a>
+			</div>
+			<div class="signup">
+			<div class="footer-email">
+				<h2>Join our company</h2>
+				<input type="email" placeholder="Enter your email adress" id="footer-email">
+				<input type="submit" id="footer-email-btn" value="Sign up">
+			</div>
+			<input type="checkbox" id="footer-email-chb" >I agree to the <a href="">Terms and Conditions</a>
+		</div>
+		</div>
+	</div>
+</body>
 </html>
