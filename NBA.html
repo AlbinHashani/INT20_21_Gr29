@@ -4,6 +4,58 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>NBA Website</title>
+	<script type="text/javascript">
+
+		let i = 0;
+		let j = 4;
+		
+
+		function next()
+		{
+			document.getElementById("content" + (i+1)).classList.remove("active");
+			i = (j + i + 1 ) % j;
+
+			document.getElementById("content" + (i+1)).classList.add("active");
+			indicator(i+1);
+		}	
+		
+		function prev()
+		{
+			document.getElementById("content" + (i+1)).classList.remove("active");
+			i = (j + i - 1 ) % j;
+			document.getElementById("content" + (i+1)).classList.add("active");
+			indicator(i+1);
+		}    
+
+
+		function indicator(num)
+		{
+			dots.forEach(function(dot){
+				dot.style.backgroundColor = "transparent";
+			});
+			document.querySelector(".dot-ccontainer button:nth-child(" + num + ")").style.backgroundColor = "#070c2f";
+		}
+
+
+
+		function dot(index)
+		{
+			images.forEach(function(image){
+				image.classList.remove("active");
+			});
+			document.getElementById("content" + index).classList.add("active");
+			i = index - 1;
+			indicator(index);
+		}
+
+
+
+
+		function button()
+		{
+			document.getElementById("click").innerHTML = "click the link to see more news !";
+		}
+	</script>
 	<style type="text/css">
 		*{
 			margin: 0;
@@ -36,54 +88,42 @@
 			color: #fff;
 			padding: 5px 25px;
 			border: 1px solid #fff;
-			transition: 0.6s ease;
 
 		}
 		ul.ul1 li a:hover{
 			background-color: #fff;
 			color: #000;
+			transition: 0.6s ease;
 		}
-		.logo img{
+		div.logo img{
 			margin-left: 10px;
 			float: left ;
 			width: 60px;
 			height: auto;
 		}
-		ul.ul1 li.active a{
+		ul.ul1 li.active1 a{
 			background-color: #fff;
 			color: #000;
 		}
-		ul.ul2 li{
-			font-family: Helvetica;
-			float: left;
-			margin-left: 20px;
-		}
-		ul.ul2 li{
-			display: block;
-		}
 		div.suns{
+			box-shadow: 10px 10px 20px #070c2f;
 			background-color: #ebedef;
 			position: relative;
 			left: -500px;
 			margin: 100px 550px;
 			border: 2px solid #070c2f;
 			padding: 20px;
-			border-top-right-radius: 15px;
-			border-top-left-radius: 15px;
-			border-bottom-right-radius: 15px;
-			border-bottom-left-radius: 15px;
+			border-radius: 15px;
 		}
 		div.lebron{
+			box-shadow: 10px 10px 20px #070c2f;
 			background-color: #ebedef;
 			position: relative;
 			left: -500px;
 			top: -620px;
 			margin: 100px 550px;
 			border: 2px solid #070c2f;
-			border-bottom-left-radius: 15px;
-			border-bottom-right-radius: 15px;
-			border-top-left-radius: 15px;
-			border-top-right-radius: 15px;
+			border-radius: 15px;
 			padding: 20px;
 		}
 		img.sunss{
@@ -96,6 +136,7 @@
 			font-family: Verdana;
 		}
 		div.curry{
+			box-shadow: 10px 10px 20px #070c2f;
 			background-color: #ebedef;
 			position: relative;
 			left: -500px;
@@ -125,6 +166,7 @@
 			color: #070c2f;
 		}
 		div.suns1{
+			box-shadow: 10px 10px 20px #070c2f;
 			background-color: #ebedef;
 			padding: 20px;
 			font-size: 139%;
@@ -133,12 +175,10 @@
 			top: -648px;
 			left: 1000px;
 			border: 2px solid #070c2f;
-			border-bottom-left-radius: 15px;
-			border-top-left-radius: 15px;
-			border-bottom-right-radius: 15px;
-			border-top-right-radius: 15px;
+			border-radius: 15px;
 		}
 		DIV.lebron1{
+			box-shadow: 10px 10px 20px #070c2f;
 			height: 540px;
 			background-color: #ebedef;
 			font-size: 139%;
@@ -148,12 +188,10 @@
 			position: relative;
 			left: 1000px;
 			top: -1280px;
-			border-bottom-right-radius: 15px;
-			border-bottom-left-radius: 15px;
-			border-top-right-radius: 15px;
-			border-top-left-radius: 15px;
+			border-radius: 15px;
 		}
 		div.curry2{
+			box-shadow: 10px 10px 20px #070c2f;
 			background-color: #ebedef;
 			font-size: 121%;
 			padding: 10px;
@@ -191,7 +229,7 @@
 			position: sticky;
 			background-color: #070c2f;
 			padding-bottom: 4rem;
-			margin-top: 120%;
+			margin-top: 105%;
 
 		}
 		.footer{
@@ -261,6 +299,7 @@
 			display: block;
 		}
 		.kd{
+			box-shadow: 10px 10px 20px #070c2f;
 			width: 83%;
 			height: 1100px;
 			margin-top: 255px;
@@ -279,17 +318,6 @@
 			position: relative;
 			top: -870px;
 		}
-		.nested
-		{
-			position: absolute;
-			background-color: #070c2f;
-			margin-top: 20px;
-			width: 300px;
-			height: auto;
-		}
-		ul.nested{
-			display: block;
-		}
 		ul.ul-footer{
 			margin-left: 17px;
 		}
@@ -298,18 +326,132 @@
 			color: #fff;
 			margin-left: 10px;
 		}
+		.ccontainer{
+			background-color: #ebedef;
+			width: 1200px;
+			height: 900px;
+			position: relative;
+			left: 19%;
+			top: 50%;
+			border: 2px solid #070c2f;
+			border-radius: 10px;
+			margin-bottom: 20px;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			font-family: Verdana;
+			font-size: 20px;
+			padding-top: 7px;
+			margin-top: 65px;
+			box-shadow: 10px 10px 20px #000;
+
+		}
+
+		.image-ccontainer{
+			position: relative;
+		}
+
+		.image-ccontainer img{
+			box-shadow: 5px 5px 10px #070c2f;
+			position: relative;
+			width: 900px;
+			height: 650px;
+			display: none;
+		}
+
+		img.active{
+			display: block;
+			margin-left: 150px;
+			margin-top: 30px;
+		}
 		
+		button{
+			outline:none;
+			cursor: pointer;
+		}
+		
+
+		#prev,#next{
+			cursor: pointer;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			border: 1px solid #070c2f;
+			background-color: #070c2f;
+			color: #fff;
+			height: 60px;
+			width: 50px;
+			font-family: verdana;
+			font-size: 18px;
+			margin: auto;
+			font-weight: bolder;
+		}
+		#prev{
+			left: 90px;
+			border-top-left-radius: 8px;
+			border-bottom-left-radius: 8px;
+
+		}
+		#next{
+			right: 90px;
+			border-top-right-radius: 8px;
+			border-bottom-right-radius: 8px;
+		}
+		#treshe{
+			font-family: verdana;
+			font-size: 25px;
+			padding: 10px 10px;
+			float: left;
+			text-align: left;
+		}
+
+		.kd img{
+			margin-top: 20px;
+			margin-left: 10px;
+		}
+		.newsbutton{
+			position: relative;
+			top: 1900px;
+			left: 50px;
+			width: 160px;
+			height: 50px;
+			font-size: 15px;
+			font-family: Verdana;
+			background-color: #fff;
+			box-shadow: none;
+			border-radius: 10px;
+			color: #070c2f;
+			border: 2px solid #070c2f;
+
+
+		}
+
+		.linku
+		{
+			position: relative;
+			top: 1940px;
+			left: 50px;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			color: #070c2f;
+			font-size: 15px;
+			border: 2px solid #070c2f;
+			background-color: #fff;
+			width: 160px;
+			height: 50px;
+			border-radius: 10px;
+		}
+
+
 	</style>
 </head>
 <body>
 	<header>
 		<hr color="#fff">
-		<div class="main">
 			<div class="logo">
 				<a href="NBA.html"><img  src="logo.png"></a>
 			</div>
 				<ul class="ul1">
-					<li class="active"><a href = "NBA.html">HOME</a></li>
+					<li class="active1"><a href = "NBA.html">HOME</a></li>
 					<li><a href = "statistics.html">STATISTICS</a></li>
 					<li><a href="schedule.html">SCHEDULE</a></li>
 					<li><a href="history1.html">HISTORY</a></li>
@@ -320,7 +462,29 @@
 	</header>
 	<div class="main">
 		<div class="news">
-			<p><b>NEWS</b></p>
+			<b><p>NEWS</b></p>
+		</div>
+		<div class="ccontainer">
+			<h1>
+				Stephen Curry sets record for career 3-pointers
+			</h1>
+			<hr>	
+			<div class="image-ccontainer">
+				<img src="img/steph2.jpg" id="content1" class="active" alt="">
+				<img src="img/steph3.jpg" id="content2" alt="">
+				<img src="img/steph4.jpg" id="content3" alt="">
+				<img src="img/steph5.jpg" id="content4" alt="">
+				<img src="img/steph6.jpg" id="content5" alt="">
+			</div>
+			<hr>
+			<p id="treshe">
+				Golden State Warriors star <mark>Stephen Curry</mark> etched his name in the history books on Tuesday at Madison Square Garden. Curry became the NBA's all-time leader in made threes as he connected on his 2,974th career triple, passing Ray Allen's career mark.
+			</p>
+			
+
+			<button id="prev" onclick="prev()">&lt</button>
+			<button id="next"  onclick="next()">&gt</button>
+
 		</div>
 	<div class="suns">
 		<h1>Suns go to a 10 game winning streak</h1>
@@ -403,12 +567,17 @@ Of course, there’s no question about who the two best teams in the league have
 	</div>
 
 	</div>
+
+
+	<button class="newsbutton" onclick="button()">Click here to see more news!</button>
+	<p class="linku"><a href = " https://www.NBA.com "  id="click"></a></p>
+
+
 </div>
 	<div class="footer-container">
 		<div class="footer">
 		<div class="adresa">
 			<address>
-				
 					<p>© 2021 NBA Media Venture,LLC,All rights reserved</p>
 					<ul class="ul-footer">
 						<li>More: </li>
@@ -420,7 +589,7 @@ Of course, there’s no question about who the two best teams in the league have
 					<p>You can ,<a href="mailto:someone@example.com">Send email</a> to us.</p>
 			</address>
 		</div>	
-			<div class="footer-heading ">
+			<div class="footer-heading">
 				<h2>Social Media</h2>
 				<a href="https://www.facebook.com" target="_blank">Facebook</a>
 				<a href="https://www.instagram.com" target="_blank">Instagram</a>
