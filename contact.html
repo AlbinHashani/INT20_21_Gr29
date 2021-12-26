@@ -49,7 +49,6 @@
         }
         body{
             background-image: url(img/nbaaa.jpg);
-
             width: 100%;
             height: auto;
         }
@@ -62,6 +61,8 @@
             left: 40%;
             transform: translateX(-50%,-50%);
             position: absolute;
+            resize: both;
+            overflow: hidden;
         }
         form{
             margin: 45px;
@@ -98,7 +99,6 @@
         }
         #hr{
             width: auto;
-            size: 0.5%;
         }
         #p1{
             font-family: verdana;
@@ -218,16 +218,16 @@
             <input type="email" class="input-field"  placeholder="Your Email">
             <input type="text" class="input-field"  placeholder="Subject">
             <textarea type="text" class="input-field" placeholder="Your message"></textarea>
-            <button type="button" class="button">Send Message</button>
+            <button type="button" class="button">Send Message / D&euml;rgoni mesazh</button>
             <hr id="hr">
             
         <p id="p1">Please rate our page:</p>
-            <input type="radio" class="radio" value="1">
-            <label for="">Good</label><br>
-            <input type="radio" class="radio" value="60">
-            <label for="age2">Bad</label><br>  
-            <input type="radio" class="radio" value="100">
-            <label for="age3">Awesome</label><br><br>
+            <input type="radio" class="radio" >
+            <label>Good</label><br>
+            <input type="radio" class="radio" >
+            <label >Bad</label><br>  
+            <input type="radio" class="radio">
+            <label>Awesome</label><br><br>
             <input type="submit" class="submit" value="Submit">
         </form>
     </div>
