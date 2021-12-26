@@ -53,7 +53,7 @@
 
 		function button()
 		{
-			document.getElementById("click").innerHTML = "click the link to see more news !";
+			document.getElementById("click").innerHTML = " NBA NEWS !";
 		}
 	</script>
 	<style type="text/css">
@@ -410,7 +410,9 @@
 			margin-left: 10px;
 		}
 		.newsbutton{
+			background-image: linear-gradient(#070c2f,#fff);
 			position: relative;
+			box-shadow: 10px 10px 20px #070c2f;
 			top: 1900px;
 			left: 50px;
 			width: 160px;
@@ -422,25 +424,89 @@
 			border-radius: 10px;
 			color: #070c2f;
 			border: 2px solid #070c2f;
-
-
 		}
 
-		.linku
+		.newsbutton:hover{
+			transform: scale(1.2,1.2);
+			transition: 0.6s ease;
+			text-shadow: 1px 1px #fff;
+		}
+
+
+
+		.divifundit{
+			border-image: url(img/nbaaa.jpg) 30 round;
+			box-shadow: 10px 10px 20px transparent;
+			border: 2px solid;;
+			padding: 100px;
+			background-image: url(img/espn.png) , url(img/xmas.png) ;
+			position: relative;
+			background-position: left top, center;
+			background-size: auto;
+			top: 1900px;
+			margin-bottom: 20px;
+			margin-left: 50px;
+			margin-right: 230px;
+			border-radius: 15px;
+			height: 550px;
+			animation: animacioni;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+		}
+		.divifundit img{
+			width: 500px;
+			height: auto;
+		}
+		.divifundit:hover{
+			transform: rotateX(10deg);
+			transform: rotateY(10deg);
+			transform: rotateZ(10deg);
+			transition: 0.6s ease;
+		}
+
+		.linku a
 		{
+			background-image: radial-gradient(#070c2f,#fff,#070c2f);
+			padding: 5px;
+			width: 160px;
+			height: 50px;
+			text-decoration: none;
 			position: relative;
 			top: 1940px;
 			left: 50px;
 			font-family: Verdana, Geneva, Tahoma, sans-serif;
-			color: #070c2f;
 			font-size: 15px;
 			border: 2px solid #070c2f;
 			background-color: #fff;
 			width: 160px;
 			height: 50px;
 			border-radius: 10px;
+			color: #000;
+			text-shadow: 2px 1px  #fff;
 		}
 
+
+		@keyframes animacioni {
+			0%{
+				border-color: #070c2f;
+			}
+			20%{
+				border-color: #5162e4;
+			}
+			40%{
+				border-color: #070c2f;
+			}
+			60%{
+				border-color: #5162e4;
+			}
+			80%{
+				border-color: #070c2f;
+			}
+			100%{
+				background-color: #5162e4;
+			}
+			
+		}
 
 	</style>
 </head>
@@ -567,11 +633,15 @@ Of course, there’s no question about who the two best teams in the league have
 	</div>
 
 	</div>
+	<div class="divifundit">
+		
+	</div>
 
 
 	<button class="newsbutton" onclick="button()">Click here to see more news!</button>
-	<p class="linku"><a href = " https://www.NBA.com "  id="click"></a></p>
+	<p class="linku"><a href = " https://www.NBA.com "  id="click" target="_blank"></a></p>
 
+		
 
 </div>
 	<div class="footer-container">
