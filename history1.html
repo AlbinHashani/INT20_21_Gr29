@@ -4,6 +4,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>NBA History</title>
+	<script src="index.js">
+		myplayer();
+		myteam();
+		champs();
+	</script>
 	<style type="text/css">
 		*{
 			margin: 0;
@@ -82,7 +87,7 @@
 			background-color: #070c2f;
 			padding-bottom: 4rem;
 			padding-top: -1000px;
-			margin-top: 50%;
+			margin-top: -10%;
 
 		}
 		.footer{
@@ -198,8 +203,13 @@
 			font-family: verdana;
 			border: 2px solid #070c2f;
 			background-color: #ebedef;
-			padding: 15px;
+			padding: 22px;
 			border-radius: 10px;
+			column-count: 3;
+			column-gap: 25px;
+			column-rule-style: solid;
+			column-rule-width: 0.5px;
+			column-rule-color: #070c2f;
 		}
 
 		.content:hover {
@@ -212,14 +222,15 @@
 			background-color: #070c2f;
 			color: #fff;
 			margin-top: 30px;
-			margin-right: 20px;
+			margin-right: 25px;
 			position: relative;
 			left: 25px;
+			padding-left: 10px;
 		}
 
 		.content-2{
 			border: 2px solid #070c2f;
-			padding: 15px;
+			padding: 45px;
 			font-size: 18px;
 			font-family: verdana;
 			background-color: #ebedef;
@@ -239,6 +250,7 @@
 			padding: 50px;
 			margin-right : 20px; 
 			font-size: 30px;
+			margin-bottom: 250px;
 		}
 		.hh{
 			font-family: verdana;
@@ -257,6 +269,37 @@
 		}
 		.mvp:hover{
 			box-shadow: 10px 10px 20px #070c2f;
+		}
+		#canvas{
+			margin-left: 20px;
+			border-radius: 15px;
+			margin-top: 50px;
+			background-color: #ebedef;
+			text-align: center;
+		}
+		#canvas:hover{
+			box-shadow:10px 10px 20px #070c2f ;
+		}
+		.video1{
+			align-items: center;
+			justify-content: center;
+			font-family: verdana;
+			font-size: 30px;
+			margin-top: -100px;
+			margin-bottom: 270px;
+			border: 2px solid #070c2f;
+			background-color: #ebedef;
+			margin-left: 20px;
+			margin-right: 20px;
+			border-radius: 15px;
+			padding: 40px;
+		}
+		.video1 h1{
+			padding-bottom: 20px;
+		}
+
+		.video1 p{
+			padding: 20px;
 		}
 	</style>
 </head>
@@ -282,8 +325,13 @@
 			<h1> HISTORY </h1>
 		</div>
 
+
+		<canvas id="canvas" class="canvasi" width="1860" height="300" style="border: 2px solid #070c2f;">
+		</canvas>
+
+
 		<div class="content">
-			<img src=img/Wilt3.jpg width="265" height="340" style="float:left; margin-right:10px; margin-bottom:2px;">
+			<img src=img/historiaa.jpg width="265" height="339" style="float:left; margin-right:10px; margin-bottom:2px;">
 			<div class="justify">
 			<h1 float:right>The roots of the NBA</h1>
 			<p float:right>
@@ -301,7 +349,6 @@
 				named Frank Zollner was key in keeping the NBA financially afloat during this time.
 			</p>
 			<p>
-				
 				The NBA continued with 8 teams from 1955 until 1961 when the Chicago Packers joined the league.
 				The Packers, now the Washington Wizards, are not considered to be the first expansion team, 
 				that distriction goes to the Chicago Bulls because the Bulls, who joined in 1966, had an actual expansion draft. 
@@ -437,8 +484,8 @@
 				</tr>
 				<tr>
 					<td>2020-2021</td>
-					<td>NIKOLA JOKIC</td>
-					<td>DENVER NUGGETS</td>
+					<td>Nikola Jokic</td>
+					<td>Denver Nuggets</td>
 					<td>C</td>
 					<td>26.4</td>
 				</tr>
@@ -506,8 +553,41 @@
 					<td>27.1</td>
 				</tr>
 			</table>
+		</div>
 
-
+		<div class="video1">
+			<h1>Some of the greatest moments in NBA History</h1>
+			<br>
+			<hr>
+			<br>
+			<p>Kyrie Irving 2016 NBA Finals winning 3-pt (video)</p>
+			<video width="800" height="450" controls>
+				<source src="img/kyrievideo.mp4" type="video/mp4">
+				<source src="img/kyrievideo.mp4" type="video/ogg">
+				Your browser does not support the video tag.
+			</video>
+			<br>
+			<p>Kyrie Irving 2016 NBA Finals winning 3-pt (audio)</p>
+			<audio controls>
+				<source src="img/kyrieIrving.mp3" type="audio/ogg">
+				<source src="img/kyrieIrving.mp3" type="audio/mpeg">
+			  Your browser does not support the audio element.
+			  </audio> 
+			<br>
+			<hr>
+			<br>
+			<p>Michael Jordan 98' winning shot against Jazz (video)</p>
+			<video width="800" height="450" controls>
+				<source src="img/jordan98.mp4" type="video/mp4">
+				<source src="img/jordan98.mp4" type="video/ogg">
+				Your browser does not support the video tag.
+			</video>	
+			<p>Michael Jordan 98' winning shot against Jazz (audio)</p>
+			<audio controls>
+				<source src="img/jordan98.mp3" type="audio/ogg">
+				<source src="img/jordan98.mp3" type="audio/mpeg">
+			  Your browser does not support the audio element.
+			  </audio>
 		</div>
 
 		
@@ -545,7 +625,14 @@
 		</div>
 		</div>
 	</div>
-	
-		</script>
+	<script type="text/javascript">
+		var ctx = document.getElementById("canvas").getContext("2d");
+		ctx.font = "50px verdana";
+		ctx.strokeText("This is the NBA history",670,150);
+
+		
+
+ 
+	</script>
 </body>
 </html>
