@@ -6,6 +6,8 @@
 	<title>NBA Website</title>
 	<script type="text/javascript">
 
+		alert("This is just a copy of a NBA page!")
+
 		let i = 0;
 		let j = 5;
 		
@@ -28,33 +30,45 @@
 		}    
 
 
-		function indicator(num)
-		{
-			dots.forEach(function(dot){
-				dot.style.backgroundColor = "transparent";
-			});
-			document.querySelector(".dot-ccontainer button:nth-child(" + num + ")").style.backgroundColor = "#070c2f";
-		}
-
-
-
-		function dot(index)
-		{
-			images.forEach(function(image){
-				image.classList.remove("active");
-			});
-			document.getElementById("content" + index).classList.add("active");
-			i = index - 1;
-			indicator(index);
-		}
-
-
-
 
 		function button()
 		{
 			document.getElementById("click").innerHTML = " NBA NEWS !";
 		}
+
+		function allowDrop(ev)
+		{
+			ev.preventDefault();
+		}
+		function drag(ev){
+			ev.dataTransfer.setData("text",ev.target.id);
+		}
+
+		function drop(ev)
+		{
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+
+			ev.target.appendChild(document.getElementById(data));
+		}
+
+		function thefunction()
+ 	 	{
+    		let x = document.getElementById("rings").value;
+
+    	let text;
+   		 if(isNaN(x) || x == 3)
+    	{
+     		 text = "The answer is correct";
+    	}
+    	else{
+     		 text = "The asnwer is not correct";
+    	}
+    		document.getElementById("therings").innerHTML = text
+  		}
+
+
+	
 	</script>
 	<style type="text/css">
 		*{
@@ -428,6 +442,7 @@
 
 		.newsbutton:hover{
 			transform: scale(1.2,1.2);
+			transform: translate(10px,10px);
 			transition: 0.6s ease;
 			text-shadow: 1px 1px #fff;
 		}
@@ -450,7 +465,7 @@
 			border-radius: 15px;
 			height: 550px;
 			animation: animacioni;
-			animation-duration: 10s;
+			animation-duration: 5s;
 			animation-iteration-count: infinite;
 		}
 		.divifundit img{
@@ -506,6 +521,70 @@
 				background-color: #5162e4;
 			}
 			
+		}
+		.draggame{
+			position: relative;
+			border: 2px solid #070c2f;
+			top: 1950px;
+			margin-top: 50px;
+			margin-bottom: 65px;
+			border-radius: 15px;
+			margin-right: 230px;
+			margin-left: 50px;
+			background-color: #ebedef;
+			padding: 15px;
+		}
+
+		#div1 , #div2{
+			display: flex;
+			padding-left: 30px;
+
+			width: 150px;
+			height: 333.25px;
+			margin-top: 35px;
+			margin-left: 35px;
+			padding: 10px;
+			border: 1px solid #070c2f;
+		}
+		#div1{
+			margin-right: 250px;
+		}
+		.kuizi{
+			font-size: 25px;
+			font-family: verdana;
+			background-color: #ebedef;
+			padding: 70px;
+			border: 2px solid #070c2f;
+			border-radius: 15px;
+			position: relative;
+			top: 1900px;
+			margin-top: 45px;
+			margin-bottom: 45px;
+			margin-left: 50px;
+			margin-right: 230px;
+			text-shadow: 1px #fff;
+		}
+		.kuizi:hover{
+			box-shadow: 10px 10px 20px #070c2f;
+		}
+		.kuizi h1{
+			text-align: center;
+		}
+		#button{
+			width: 100px;
+			height: 50px;
+			color: #fff;
+			background-color: #070c2f;
+			margin-top: 20px;
+			font-size: 15px;
+		}
+		.curved{
+			position: relative;
+			top: 2010px;
+			margin-top: ;
+			background-color: #fff;
+			color: #070c2f;
+			text-align: center;
 		}
 
 	</style>
@@ -638,10 +717,96 @@ Of course, there’s no question about who the two best teams in the league have
 	</div>
 
 
+	<div class="draggame">
+		<h1>Drag and drop game!</h1>
+		<p>Drag the logo into the rectangle</p>
+		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" >
+			<img class="dragimg" src="img/nbalogo.png" draggable="true" ondragstart="drag(event)" id="drag1" width="150" height="333.25">
+		</div>
+		<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+		</div>
+	</div>
+	<div class="kuizi">
+		<h1>This is a NBA quiz</h1>
+		<hr>
+	<form id="quiz" name="quiz">
+		<p>1.Which team has won the most championships</p>
+		<input id="textbox1" type="text" name="question1">
+		<br>
+		<br>
+		<p>2.Which player has scored the most points in the history of the NBA?</p>
+		<input type="radio" id="tiku" name="question2" value="Kareem-Abdul Jabbar">Kareem-Abdul Jabbar<br>
+		<input type="radio" id="tiku" name="question2" value="LeBron James">LeBron James<br>
+		<input type="radio" id="tiku" name="question2" value="Karl Malone">Karl Malone<br>
+		<br>
+		<br>
+		<p>3.Which HOF player never won a ring?</p>
+		<input type="radio" id="tiku" name="question3" value="Michael Jordan">Michael Jordan<br>
+		<input type="radio" id="tiku" name="question3" value="Isiah Thomas">Isiah Thomas<br>
+		<input type="radio" id="tiku" name="question3" value="Charles Barkley">Charles Barkley<br>
+		<br>
+		<br>
+		<p>4.In which season did Stephen Curry won the unanimous MVP award?</p>
+		<input id="textbox2" type="text" name="question4">
+		<br>
+		<br>
+		<p>5.How many teams has Shaquille O'Neal played for?</p>
+		<input type="radio" id="tiku" name="question5" value="5">5<br>
+		<input type="radio" id="tiku" name="question5" value="6">6<br>
+		<input type="radio" id="tiku" name="question5" value="7">7<br>
+		<br>
+		<br>
+		<p>6.Which of these players has not won a back-to-back MVP award?</p>
+		<input type="radio" id="tiku" name="question6" value="Russell Westbrook">Russell Westbrook<br>
+		<input type="radio" id="tiku" name="question6" value="Tim Duncan">Tim Duncan<br>
+		<input type="radio" id="tiku" name="question6" value="Steph Curry">Steph Curry<br>
+		<br>
+		<br>
+		<p>7.How many assits per game has John Stockton averaged throughout his career?</p>
+		<input type="radio" id="tiku" name="question7" value="11.2">11.2<br>
+		<input type="radio" id="tiku" name="question7" value="9.7">9.7<br>
+		<input type="radio" id="tiku" name="question7" value="10.5">10.5<br>
+		<br>
+		<br>
+		<p>8.In what year was the 3 point line put into action?</p>
+		<input type="radio" id="tiku" name="question8" value="1979">1979<br>
+		<input type="radio" id="tiku" name="question8" value="1980">1980<br>
+		<input type="radio" id="tiku" name="question8" value="1981">1981<br>
+		<br>
+		<br>
+		<p>9.The NBA record for the most rebounds in a game is 55 rebounds. Who was the player?</p>
+		<input type="radio" id="tiku" name="question9" value="Dennis Rodman">Dennis Rodman<br>
+		<input type="radio" id="tiku" name="question9" value="Wilt Chamberlain">Wilt Chamberlain<br>
+		<input type="radio" id="tiku" name="question9" value="Bill Russell">Bill Russell<br>
+		<br>
+		<br>
+		<p>10.The 1992 Olympic Dream Team won the gold medal. What was the result of the final against Croatia?</p>
+		<input type="radio" id="tiku" name="question10" value="USA 117-85 Croatia">USA 117-85 Croatia<br>
+		<input type="radio" id="tiku" name="question10" value="USA 112-99 Croatia">USA 112-99 Croatia<br>
+		<input type="radio" id="tiku" name="question10" value="USA 134-89 Croatia">USA 134-89 Croatia<br>
+		<br>
+		<hr>
+
+		
+		<input id="button" type="button" value="I am done" onclick="check();">
+		
+		</form>
+		
+		<div id="pas-perfundimit">
+		<p id="message"></p>
+		<p id="correct"></p>
+		<img id="picture">
+		</div>
+	</div>
+
+
 	<button class="newsbutton" onclick="button()">Click here to see more news!</button>
 	<p class="linku"><a href = " https://www.NBA.com "  id="click" target="_blank"></a></p>
 
-		
+	<div class="curved">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#070c2f" fill-opacity="1" d="M0,192L48,202.7C96,213,192,235,288,245.3C384,256,480,256,576,229.3C672,203,768,149,864,128C960,107,1056,117,1152,112C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+	</div>
 
 </div>
 	<div class="footer-container">
@@ -675,5 +840,110 @@ Of course, there’s no question about who the two best teams in the league have
 		</div>
 		</div>
 	</div>
+
+
+	<script>
+		function check(){
+			var question1=document.quiz.question1.value;
+			var question2=document.quiz.question2.value;
+			var question3=document.quiz.question3.value;
+			var question4=document.quiz.question4.value;
+			var question5=document.quiz.question5.value;	
+			var question6=document.quiz.question6.value;
+			var question7=document.quiz.question7.value;
+			var question8=document.quiz.question8.value;
+			var question9=document.quiz.question9.value;
+			var question10=document.quiz.question10.value;
+			
+			
+			
+			var correct=0;
+			
+			if(question1=="Boston Celtics"){
+				correct++;
+			}
+			if(question2=="Kareem-Abdul Jabbar"){
+				correct++;
+			}
+			if(question3=="Charles Barkley"){
+				correct++;
+			}
+			if(question4=="2016"){
+				correct++;
+			}
+			if(question5=="6"){
+				correct++;
+			}
+			if(question6=="Russell Westbrook"){
+				correct++;
+			}
+			if(question7=="10.5"){
+			correct++;
+			}
+			if(question8=="1979"){
+				correct++;
+			}
+			if(question9=="Wilt Chamberlain"){
+				correct++;
+			}
+			if(question10=="USA 117-85 Croatia"){
+				correct++;
+			}
+			
+			
+			
+			
+			
+			var messages=["You're the GOAT","You're a Champ and an MVP","You average 36 a game","You're a Superstar","You're an All Star","Just an average player", "Benchwarmer"];
+			
+			var pictures=["img/brontitle.gif","img/timmygif.gif","img/hardengif.gif","img/currygif.gif","img/kyriegif.gif","img/conleyaverage.gif","img/bench.gif"];
+			
+			var range;
+			
+				if (correct<3)
+				{
+					range=6;
+				}
+				if(correct>2&& correct<5)
+				{
+					range=5;
+				}
+				if(correct>4 && correct<7)
+				{
+					range=4;
+				}
+				if(correct>6 && correct<8)
+				{
+					range=3;
+				}
+				if(correct>7 && correct<9)
+				{
+					range=2;
+				}
+					
+				if(correct>8 && correct <10){
+					range=1;
+				}
+				if(correct>9){
+					range=0;
+				}
+				
+			
+			
+			
+			
+			
+		
+			document.getElementById("pas-perfundimit").style.visibility="visible"
+			
+			document.getElementById("message").innerHTML=messages[range];
+			document.getElementById("correct").innerHTML="Ju keni " + correct + " pergjigje te sakta.";
+		
+			document.getElementById("picture").src=pictures[range];
+		}
+		
+		
+		</script>
+
 </body>
 </html>
