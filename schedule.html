@@ -4,6 +4,22 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Schedule</title>
+    <script type="text/javascript">
+        function gameday()
+        {
+            var today = new Date();
+
+            if(today.getDate() = 25 && today.getMonth == 12)
+            {
+                document.writeln("GAME DAYYYY");
+            }
+
+        }
+
+    let text = document.getElementById("replace").innerHTML;
+    document.getElementById("replace") = text.replace("XMAS","CHRISTMAS");
+
+    </script>
     <style type="text/css">
         *{
             margin: 0;
@@ -59,66 +75,45 @@
             width: 100%;
             height: 120%;
         }
-
-        #slider {
-            width: 1000px;
-            height: 500px;
-            padding: 100%;
-            margin: 20px auto;
-            position: relative;
-            border: 10px solid #d3d3d3;
-            float: left;
-            }
-
         h1 {
             margin: 50px;
         }         
 
-.slides {
-  width: 500%;
-  height: 100%;
-  display: flex;
-}
+        .slideshow {
+            position: static;
+            margin: 100px 100px;
+            width: 60%;
+            height: 60%;
+        }
 
-.slideshow {
-  position: static;
-  margin: 100px 100px;
-  width: 60%;
-  height: 60%;
-}
+        .mySlides {
+            margin-top: 10%;
+            margin-left: 50%;
+            width: 150%;
+            height: 125%;
+            transform: translateX(50px);
+            transition: width 0.5s;
+        }
 
-.mySlides {
-    margin-top: 10%;
-  margin-left: 50%;
-  width: 150%;
-  height: 125%;
-  transform: translateX(50px);
-  -webkit-transition: width 0.5s;
-  transition: width 0.5s;
-}
-
-
-
-.mySlides:hover {
-  width: 1100px;
-
-  transform: translateX(-50px);
-}
-    .christmas{
-        margin-top: 20px;
-        padding-top: 10px;
-        font-size: 270%;
-        color: #fff;
-        text-align: left;
-        margin-left: 10px;
-        margin-right: -12%;
-        border: 1px solid transparent;
-        background-color: #070c2f;
-    }
-    h1{
-        font-family: verdana;
-    }
-    .footer-container{
+        .mySlides:hover {
+            width: 1100px;
+            transform: translateX(-50px);
+        }
+        .christmas{
+            margin-top: 20px;
+            padding-top: 10px;
+            font-size: 270%;
+            color: #fff;
+            text-align: left;
+            margin-left: 10px;
+            margin-right: -12%;
+            border: 1px solid transparent;
+            background-color: #070c2f;
+        }
+        h1{
+            font-family: verdana;
+        }
+        .footer-container{
             padding-top: 3%;
             position: sticky;
             background-color: #070c2f;
@@ -250,23 +245,22 @@
                 </ul>
             </div>
     </header>
-    <div><h1 class="christmas">2021 CHRISTMAS GAMES</h1></div>
+    <div>
+        <h1 id="replace" class="christmas">2021 CHRISTMAS GAMES</h1>
+    </div>
+    <script>
+        gameday();
+    </script>
     <div id="slideshows">
-        <div class="w3-content w3-section" style="max-width:500px">
-           
+        <div style="max-width:500px">
                 <img class="mySlides" src="img/gswsuns.jpg">
-       
             <div class="celticsmil"><img class="mySlides" src="img/celticsmil.jpg"></div>
             <div class="netslakers"><img class="mySlides" src="img/netslakers.jpg"></div>
             <div class="mavsjazz"><img class="mySlides" src="img/mavsjazz.jpg"></div>
         </div>
     </div>
-
-
-    <br><br>
-
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700%7CRaleway:700'
-        rel='stylesheet' type='text/css'>
+        <br>
+        <br>
         <br>
         <br>
         <br>
@@ -274,7 +268,6 @@
         <table border="2">
             <tr>
                 <th colspan="2">Golden State Warriors vs Phoenix Suns 25.12.2021</th>
-
             </tr>
             <tr>
                 <td class="start" colspan="2" >Starting Line-Ups</td>
