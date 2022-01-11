@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>NBA History</title>
-	<script src="index.js">
+	<script  src="index.js , https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 		myplayer();
 		myteam();
 		champs();
@@ -301,6 +301,12 @@
 		.video1 p{
 			padding: 20px;
 		}
+		.animationdiv{
+			margin-left: 30px;
+			margin-top: -160px;
+			margin-bottom: 200px;
+			display: block;
+		}
 	</style>
 </head>
 <body>
@@ -590,9 +596,15 @@
 			  </audio>
 		</div>
 
+
+		<div class="animationdiv">
+		<button>Click to see NBA animation</button>
+		<div class="divanimate"  style="width: 100px; height: 100px; background-color: #070c2f;">
+		</div>
 		
 		
-</div>
+	</div>
+	<footer>
 	<div class="footer-container">
 		<div class="footer">
 		<div class="adresa">
@@ -625,12 +637,24 @@
 		</div>
 		</div>
 	</div>
+	</footer>
 	<script type="text/javascript">
 		var ctx = document.getElementById("canvas").getContext("2d");
 		ctx.font = "50px verdana";
 		ctx.strokeText("This is the NBA history",670,150);
 
-		
+	$(document).ready(function()
+	{
+		$("button").click(function()
+		{
+			var div = $(".divanimation");
+			div.animate({height: '300px' , opacity : '0.4'}, "slow");
+			div.animate({width: '300px'}, "slow");
+			div.animate({height: '300px'}, "slow");
+			div.animate({width: '300px'}, "slow");
+		});
+	});
+
 
  
 	</script>
