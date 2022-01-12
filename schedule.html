@@ -4,21 +4,26 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Schedule</title>
-    <script type="text/javascript">
-        function gameday()
-        {
-            var today = new Date();
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript">
+       
 
-            if(today.getDate() = 25 && today.getMonth == 12)
-            {
-                console.log("GAME DAYYYY");
-            }
 
-        }
+
 
     let text = document.getElementById("replace").innerHTML;
     document.getElementById("replace") = text.replace("XMAS","CHRISTMAS");
 
+    </script>
+    <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+             $("#div1").fadeToggle(2500);
+             $("#div2").fadeToggle(2500);
+             $("#div3").fadeToggle(2500);
+             $("#div4").fadeToggle(2500);
+             $("#div5").fadeToggle(2500);
+            });
+        });
     </script>
     <style type="text/css">
         *{
@@ -225,6 +230,20 @@
             color: #fff;
             margin-left: 10px;
         }
+        .divi1{
+            display: flex;
+            margin-left: 30px;
+            margin-bottom: 100px;
+        }
+        button{
+            background-color: #070c2f;
+            color: #fff;
+            font-family: verdana;
+            font-size: 20px;
+            border-radius: 15px;
+            margin-top: 200px;
+            width: 105px;
+        }
     </style>
     
 </head>
@@ -248,9 +267,25 @@
     <div>
         <h1 id="replace" class="christmas">2021 CHRISTMAS GAMES</h1>
     </div>
-    <script>
-        gameday();
-    </script>
+    <div class="divi1">
+    <button>Click to fade in/out NBA logos</button><br><br>
+
+    <div id="div1" style="width:350px;height:auto">
+    <img src="img/nbalogo.png" alt=""></div>
+    <br>
+    <div id="div2" style="width:350px;height:auto;">
+    <img src="img/nbalogo.png" alt=""></div>
+    <br>
+    <div id="div3" style="width:350px;height:auto;">
+    <img src="img/nbalogo.png" alt=""></div>
+    <div id="div4" style="width:350px;height:auto;">
+    <img src="img/nbalogo.png" alt=""></div>
+    <div id="div5" style="width:350px;height:auto;">
+    <img src="img/nbalogo.png" alt=""></div>
+    
+    </div>
+
+
     <div id="slideshows">
         <div style="max-width:500px">
                 <img class="mySlides" src="img/gswsuns.jpg">
@@ -431,5 +466,8 @@
         </div>
         </div>
     </div> 
+    <script>
+        
+    </script>
     </body>
 </html>
