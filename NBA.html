@@ -4,9 +4,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>NBA Website</title>
-	<script type="text/javascript">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js""></script>
+	<script>
 
-		alert("This is just a copy of a NBA page!")
+
+
+		alert("This is just a copy of a NBA page!");
 
 		let i = 0;
 		let j = 5;
@@ -35,6 +38,9 @@
 		{
 			document.getElementById("click").innerHTML = " NBA NEWS !";
 		}
+
+
+
 
 		function allowDrop(ev)
 		{
@@ -67,9 +73,17 @@
     		document.getElementById("therings").innerHTML = text
   		}
 
-
+		 
 	
 	</script>
+	<script >
+		 $(document).ready(function(){
+  			$("#sllajdi").click(function(){
+   			 $("#quizi").slideToggle("slow");
+  				});
+			});
+	</script>
+	
 	<style type="text/css">
 		*{
 			margin: 0;
@@ -452,7 +466,7 @@
 		.divifundit{
 			border-image: url(img/nbaaa.jpg) 30 round;
 			box-shadow: 10px 10px 20px transparent;
-			border: 2px solid;;
+			border: 2px solid;
 			padding: 100px;
 			background-image: url(img/espn.png) , url(img/xmas.png) ;
 			position: relative;
@@ -587,6 +601,22 @@
 			text-align: center;
 		}
 
+		#sllajdi{
+			border: 1px solid #070c2f;
+			border-radius: 15px;
+			background-color: #070c2f;
+			color: #fff;
+		}
+
+		#sllajdi:hover{
+			cursor: pointer;
+		}
+
+		#quizi{
+			display: none;
+		}
+	
+
 	</style>
 </head>
 <body>
@@ -715,7 +745,7 @@ Of course, there’s no question about who the two best teams in the league have
 	<div class="divifundit">
 		
 	</div>
-
+	
 
 	<div class="draggame">
 		<h1>Drag and drop game!</h1>
@@ -728,8 +758,9 @@ Of course, there’s no question about who the two best teams in the league have
 		</div>
 	</div>
 	<div class="kuizi">
-		<h1>This is a NBA quiz</h1>
+		<div id = "sllajdi"> Click here to see a quick quiz</div>
 		<hr>
+		<div id="quizi">
 	<form id="quiz" name="quiz">
 		<p>1.Which team has won the most championships</p>
 		<input id="textbox1" type="text" name="question1">
@@ -792,6 +823,7 @@ Of course, there’s no question about who the two best teams in the league have
 		<input id="button" type="button" value="I am done" onclick="check();">
 		
 		</form>
+		</div>
 		
 		<div id="pas-perfundimit">
 		<p id="message"></p>
@@ -809,6 +841,10 @@ Of course, there’s no question about who the two best teams in the league have
 	</div>
 
 </div>
+
+	
+
+	<footer>
 	<div class="footer-container">
 		<div class="footer">
 		<div class="adresa">
@@ -840,9 +876,13 @@ Of course, there’s no question about who the two best teams in the league have
 		</div>
 		</div>
 	</div>
+	</footer>
 
 
 	<script>
+
+		
+
 		function check(){
 			var question1=document.quiz.question1.value;
 			var question2=document.quiz.question2.value;
@@ -944,6 +984,7 @@ Of course, there’s no question about who the two best teams in the league have
 		
 		
 		</script>
+		
 
 </body>
 </html>
