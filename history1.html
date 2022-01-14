@@ -4,10 +4,19 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>NBA History</title>
-	<script  src="index.js , https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	<script src="index.js , https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script >
 		myplayer();
 		myteam();
 		champs();
+
+		$(document).ready(function(){
+  			$("#btn5").click(function(){
+    			$("divanimation1 , divanimation2").animate({
+      				height: 'toggle'
+    			});
+  			});
+		});
 	</script>
 	<style type="text/css">
 		*{
@@ -307,6 +316,22 @@
 			margin-bottom: 200px;
 			display: block;
 		}
+		.divanimation{
+			display: flex;
+			margin-bottom: 230px;
+			margin-left: 30px;
+			margin-top: 30px;
+		}
+		#btn5{
+			margin-left: 30px;
+			background-color: #070c2f;
+			color: #fff;
+			font-family: verdana;
+			font-size: 15px;
+			padding: 10px;
+			border-radius: 15px;
+		}
+
 	</style>
 </head>
 <body>
@@ -595,13 +620,6 @@
 			  Your browser does not support the audio element.
 			  </audio>
 		</div>
-
-
-		<div class="animationdiv">
-		<button>Click to see NBA animation</button>
-		<div class="divanimate"  style="width: 100px; height: 100px; background-color: #070c2f;">
-		</div>
-		
 		
 	</div>
 	<footer>
@@ -643,19 +661,9 @@
 		ctx.font = "50px verdana";
 		ctx.strokeText("This is the NBA history",670,150);
 
-	$(document).ready(function()
-	{
-		$("button").click(function()
-		{
-			var div = $(".divanimation");
-			div.animate({height: '300px' , opacity : '0.4'}, "slow");
-			div.animate({width: '300px'}, "slow");
-			div.animate({height: '300px'}, "slow");
-			div.animate({width: '300px'}, "slow");
-		});
-	});
+	
 
-
+		
  
 	</script>
 </body>
